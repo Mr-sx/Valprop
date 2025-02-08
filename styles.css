@@ -1,0 +1,137 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffcccb;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+}
+
+.duck {
+    position: relative;
+    display: inline-block;
+}
+
+.placard {
+    background-color: white;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: #333;
+}
+
+.message {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    font-size: 20px;
+    display: none; /* Initially hidden */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+#yesButton {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+#noButton {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+.duck-pixel {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    position: relative;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.duck-pixel::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: orange; /* Duck's beak */
+    border-radius: 2px;
+}
+
+.duck-pixel::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: black; /* Duck's eye */
+    border-radius: 50%;
+}
+
+.owl {
+    width: 50px;
+    height: 50px;
+    background-color: brown;
+    position: absolute;
+    top: 50px; /* Adjust position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* Initially hidden */
+    border-radius: 5px;
+}
+
+.owl::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: white; /* Owl's eye */
+    border-radius: 50%;
+}
+
+.owl::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    width: 10px;
+    height: 10px;
+    background-color: white; /* Owl's eye */
+    border-radius: 50%;
+}
+
+.hidden {
+    display: none;
+}
+
+.cry {
+    animation: cry 0.5s forwards;
+}
+
+@keyframes cry {
+    transform: translateY(10px);
+}
